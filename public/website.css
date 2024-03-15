@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root
+{
+  --main-col:#252526;
+  --blue-col:#007acc;
+  --bg-col:#1e1e1e;
+}
+
+
+body
+{
+  background-color:var(--bg-col);
+  color:white;
+  font-family: "Space Mono", monospace;
+}
+
+footer
+{
+  background-color:var(--main-col);
+  margin:0px;
+  padding:10px;
+  display:flex;
+  justify-content:space-between;
+  bottom:0px;
+  left:0px;
+  flex-wrap:wrap;
+}
+
+footer > #footerl
+{
+  min-width:200px;
+}
+
+div#content
+{
+  margin-top:170px;
+   position: relative;
+  min-height: 90vh;
+  text-align:center;
+}
+
+a
+{
+  color:var(--blue-col);
+}
+
+ul
+{
+  list-style:none;
+  padding:0;
+}
+
+.ulcontainer
+{
+  display:flex;
+  justify-content:center;
+}
+
+li
+{
+  text-align:left;
+}
+
+li::before
+{
+  content:'* ';
+}
+
+header
+{
+  z-index:10;
+  user-select:none;
+  margin:0px;
+  padding:0px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  background-color:var(--main-col);
+  flex-wrap:wrap;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+}
+
+header > h1
+{
+  width:30%;
+  text-align:center;
+  min-width:500px;
+/*   background-color:red; */
+}
+
+header a
+{
+  color:#f0ebd8;
+  font-size:1.2em;
+  text-decoration:none;
+  transition-duration:0.3s;
+  display:inline-block;
+  white-space:nowrap;
+}
+
+header a:hover
+{
+
+  color:var(--blue-col);
+  transition-duration:0.3s;
+  transform:scale(1.07);
+}
+
+header a::before
+{
+   content:'[';
+   opacity: 0;
+  display:inline-block;
+   transition-duration:0.3s;
+   transform: translateX(-10px);
+     margin:0ch;
+}
+
+header a::after
+{
+  content:']';
+  opacity:0;
+  display:inline-block;
+  transition-duration:0.3s;
+    transform: translateX(10px);
+  margin:0ch;
+}
+
+header a:hover::before
+{
+  content: '[';
+  color:white;
+  opacity:0.5;
+ 
+  transform: translateX(0px);
+}
+
+header a:hover::after
+{
+  content: "]";
+  color:white;
+  opacity:0.5;
+  transform: translateX(0px);
+}
+
+header > ul
+{
+  display:flex;
+  list-style:none;
+  justify-content:center;
+  width: 30%;
+  min-width:500px;
+  align-items:center;
+/*   background-color:blue; */
+  padding:0px;
+}
+
+header > ul > li
+{
+  text-align:center;
+/*   background-color:aqua; */
+}
+
+header li::before
+{
+  content:"";
+}
